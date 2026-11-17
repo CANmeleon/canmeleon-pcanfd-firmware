@@ -2,9 +2,15 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-CANmeleon PCAN Pro FD 固件让适用的 CANmeleon USB-CAN/CAN FD 硬件在 Windows 上接入 PCAN-View 与 PCAN-Basic。本仓库提供固件能力、硬件要求及安装说明。
+CANmeleon PCAN FD 兼容固件让适用的 USB-CAN/CAN FD 硬件在 Windows 上接入 PCAN-View 与 PCAN-Basic。本指南以双通道 PCAN Pro FD 模式为重点，提供硬件要求、CAN/CAN FD 参数、固件下载和驱动配置。
 
 [固件特性与性能参数](#固件特性与性能参数) · [下载与安装](#下载与安装) · [支持设备](https://canmeleon.com/zh/firmware/devices/) · [固件总览](https://github.com/CANmeleon/canmeleon-usb-can-firmware)
+
+## 什么时候选择 PCAN FD 固件
+
+- 在 PCAN-View 中查看和发送 CAN/CAN FD 报文。
+- 使用 PCAN-Basic 开发 Windows CAN/CAN FD 应用。
+- 为适用的双通道设备选择 PCAN Pro FD；需要其他通道配置时，查看[其他 PCAN FD 模式](https://github.com/CANmeleon/canmeleon-usb-can-firmware/blob/main/docs/parameters/README.zh-CN.md)。
 
 ## 支持硬件
 
@@ -68,9 +74,9 @@ PCAN Pro FD 模式；需配套具备 2 路 CAN 接口及对应模式授权的设
 
 **固件安装到什么硬件？** 安装于设备目录和管理器列出的适用 CANmeleon 硬件。模式名称表示软件接口；第三方原厂硬件的升级固件由对应厂商提供。
 
-**切换固件能增加物理通道吗？** 通道数由硬件和所选模式决定。四通道模式需要四路物理 CAN 接口及对应授权。
+**本页参数对应哪个 PCAN 模式？** 对应双通道 PCAN Pro FD。电脑端选择 PCAN-USB Pro FD，其他 PCAN 模式请查看固件总览。
 
-**性能数据适用于所有工况吗？** 按各行的速率、帧长、方向、模式和短时限定使用。可配置的数据段速率与典型报文吞吐是不同指标。
+**如何使用性能参数表？** 按总线速率、帧长、方向及模式对照自己的场景。可配置速率表示总线设置，报文吞吐表示每秒发送或接收的帧数。
 
 **固件源码在哪里？** 本仓库提供文档、参数数据和二进制下载入口，许可信息以对应组件或发布包为准。
 
@@ -79,3 +85,5 @@ PCAN Pro FD 模式；需配套具备 2 路 CAN 接口及对应模式授权的设
 固件相关的问题和新需求可在 [GitHub 固件主仓库提 Issue](https://github.com/CANmeleon/canmeleon-usb-can-firmware/issues)。请附设备型号、当前模式、固件与驱动版本、软件/API、总线配置及复现步骤。
 
 [PCAN Pro FD 参数表](docs/parameters/pcanfd-pro-fd.zh-CN.md) · [参数 JSON](docs/parameters/pcanfd-pro-fd.json) · [设备管理器问题](https://github.com/CANmeleon/canmeleon-device-manager/issues)
+
+[CANmeleon 硬件、OEM 集成与固件移植](https://github.com/CANmeleon/.github/blob/main/profile/README.zh-CN.md)

@@ -2,9 +2,15 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-CANmeleon PCAN Pro FD firmware connects supported CANmeleon USB-CAN/CAN FD hardware to PCAN-View and PCAN-Basic on Windows. This repository provides firmware capabilities, hardware requirements and installation instructions.
+CANmeleon PCAN FD-compatible firmware connects supported USB-CAN/CAN FD hardware to PCAN-View and PCAN-Basic on Windows. This guide focuses on two-channel PCAN Pro FD mode, with hardware requirements, CAN/CAN FD parameters, firmware downloads and driver setup.
 
 [Features and performance](#features-and-performance) · [Download and install](#download-and-install) · [Supported devices](https://canmeleon.com/en/firmware/devices/) · [Firmware catalog](https://github.com/CANmeleon/canmeleon-usb-can-firmware)
+
+## When to choose PCAN FD firmware
+
+- View and send CAN/CAN FD frames in PCAN-View.
+- Build a Windows CAN/CAN FD application with PCAN-Basic.
+- Choose PCAN Pro FD for a supported two-channel device. Compare [other PCAN FD modes](https://github.com/CANmeleon/canmeleon-usb-can-firmware/blob/main/docs/parameters/README.md) when your project requires a different channel count.
 
 ## Supported hardware
 
@@ -68,9 +74,9 @@ PCAN Pro FD mode; requires a device with 2 CAN interfaces and a license for this
 
 **Which hardware receives this firmware?** Install it on compatible CANmeleon devices selected through the catalog and Device Manager. The mode name identifies the software interface; firmware updates for third-party-manufactured devices come from their manufacturers.
 
-**Does switching firmware add physical channels?** Channel count depends on the hardware and selected mode. A four-channel mode requires four physical CAN channels and its corresponding license.
+**Which PCAN mode do these parameters describe?** The tables describe two-channel PCAN Pro FD mode. Select PCAN-USB Pro FD in the host software; use the firmware catalog for other PCAN modes.
 
-**Are these figures guaranteed for every workload?** Use the bus rates, frame length, direction, mode and short-duration qualifiers in each row. Configurable data-phase bit rate and typical frame throughput describe different properties.
+**How do I read the performance table?** Match the bus rates, frame length, direction and mode to your workload. Configurable bit rate describes the bus setting; frame throughput describes transmitted or received frames per second.
 
 **Where is the source code?** This repository contains documentation, parameter data and binary-download links. Refer to the component or release for its license.
 
@@ -79,3 +85,5 @@ PCAN Pro FD mode; requires a device with 2 CAN interfaces and a license for this
 Firmware problems and new feature requests can be submitted as [Issues in the CANmeleon firmware main repository](https://github.com/CANmeleon/canmeleon-usb-can-firmware/issues). Include the device model, active mode, firmware and driver versions, software/API, bus configuration and steps to reproduce.
 
 [PCAN Pro FD parameter table](docs/parameters/pcanfd-pro-fd.md) · [Parameter JSON (Chinese)](docs/parameters/pcanfd-pro-fd.json) · [Device Manager issues](https://github.com/CANmeleon/canmeleon-device-manager/issues)
+
+[CANmeleon hardware, OEM integration and firmware porting](https://github.com/CANmeleon)
